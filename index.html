@@ -1,39 +1,63 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<style>
-  body {
-    font-family: "Times New Roman", "Yu Mincho", "MS Mincho", serif; /* 美しい明朝体 */
-    font-size: 20px;       /* 文字の大きさ */
-    line-height: 1.8;      /* 行の間隔（読みやすさ） */
-    color: #333;           /* 真っ黒より少し目に優しい黒 */
-    max-width: 600px;      /* PCで見ても横に広がりすぎない（重要！） */
-    margin: 0 auto;        /* 画面の真ん中に寄せる */
-    padding: 40px 20px;    /* 上下左右に適度な余白を作る */
-    word-wrap: break-word; /* 長い文章もはみ出さない */
-    text-align: justify;
-text-justify: inter-ideograph; /* 日本語の文字間隔を調整する魔法 */
-
- }
-  a {
-    color: #000;           /* リンクの色を黒にする */
-    text-decoration: none; /* 下線を消してスッキリさせる */
-    border: 1px solid #ccc; /* ボタンっぽく囲む（お好みで） */
-    padding: 10px 20px;
-  }
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tanakaarchive</title>
+    <style>
+        body {
+            font-family: "Yu Mincho", "MS Mincho", serif;
+            line-height: 1.8;
+            /* 横幅を広げ、余白を削って「1行の文字数」を増やします */
+            max-width: 800px; 
+            margin: 0 auto;
+            padding: 40px 15px; /* 左右の余白を最小限に */
+            color: #222;
+            text-align: justify;
+            text-justify: inter-ideograph;
+            word-wrap: break-word;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 80px;
+            padding: 100px 0;
+        }
+        .header h1 { font-weight: normal; font-size: 28px; letter-spacing: 0.2em; }
+        
+        .toc {
+            margin-top: 50px;
+            border-top: 1px solid #eee;
+            padding-top: 30px;
+        }
+        .toc h2 { font-size: 18px; margin-bottom: 20px; color: #666; }
+        .toc ul { list-style: none; padding: 0; }
+        .toc li { margin-bottom: 20px; }
+        .toc a { 
+            text-decoration: none; 
+            color: #000; 
+            font-size: 18px; 
+            display: block;
+            border-left: 3px solid #eee;
+            padding-left: 15px;
+        }
+    </style>
 </head>
 <body>
-<h1>城の完成</h1>
-<p>
-ここに、私の「、」を刻みます。
-<p>広告も、ノイズもない。ここが私の、そしてあなたの「1号室」です。</p>
-<p>&nbsp;</p> 
-<p>↑これが私が最初に作った文です。</p>
-<p>私というか、AIがですが……。</p>
-<p>はじめてhtmlというのを作ってます。わざわざｐでくくるのが面倒ですね。<br>
+
+    <div class="header">
+        <h1>ここに、私の「、」を刻みます。</h1>
+    </div>
+
+    <div class="toc">
+        <h2>作品一覧</h2>
+        <ul>
+            <li><a href="page3.html">桃太郎</a></li>
+            <li><a href="page4.html">金太郎</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
 <br>
 AIくんがbrと二回打ったら一行空けられるよ！　と仰ってます。できてますか？</p>
 <p>このｐをいくつも打ってくといっぱい文が書けるらしいです。私はさっきからAIくんに質問攻めしてます。さすがのAIくんもイラッときたようで、同じことを繰り返してますね。</p>
