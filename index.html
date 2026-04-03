@@ -12,7 +12,7 @@
             max-width: 800px; 
             margin: 0 auto; 
             padding: 20px; 
-            color: #333; 
+            color: #222; 
             background: #fff; 
         }
         
@@ -27,48 +27,49 @@
                 -4px -4px 0 #f8b500, 4px -4px 0 #f8b500, -4px 4px 0 #f8b500, 4px 4px 0 #f8b500;
         }
         
-        .intro { text-align: center; margin: 30px 0; font-size: 16px; }
+        .intro { text-align: center; margin: 30px 0; font-size: 16px; font-weight: bold; }
         .intro span { display: inline-block; }
 
-        /* 動物行進：さらに少し大きく（28px） */
         .animal-line { 
             text-align: left; 
-            margin-bottom: -12px; 
+            margin-bottom: -10px; 
             padding-left: 25px; 
             font-size: 28px; 
             letter-spacing: 1px;
             white-space: nowrap;
         }
 
-        /* 概要ボーダー：真っ黒から濃いグレー(#444)に落として圧迫感を軽減 */
-        .border-main { border: 0; border-top: 4px solid #444; margin: 0 0 30px 0; }
+        /* 概要バー：3px、グレー(#666)、角丸2px */
+        .border-main { 
+            border: 0; 
+            border-top: 3px solid #666; 
+            border-radius: 2px;
+            margin: 0 0 30px 0; 
+        }
 
         .category { text-align: left; margin-bottom: 40px; }
-        .category h2 { font-size: 19px; padding-left: 12px; border-left: 12px solid #f8b500; line-height: 1.2; margin-bottom: 15px; }
+        .category h2 { font-size: 20px; padding-left: 12px; border-left: 12px solid #f8b500; line-height: 1.2; margin-bottom: 15px; }
         .category ul { list-style: none; padding: 0; }
-        .category li { margin: 10px 0; font-size: 17px; }
+        .category li { margin: 10px 0; font-size: 18px; }
         .category a { text-decoration: none; color: #0055aa; font-weight: bold; }
 
-        /* 下ゾーン */
-        /* 区切り線を少し濃く(#ddd)して視認性を確保 */
-        .archive-zone { border-top: 1px solid #ddd; padding-top: 30px; margin-top: 60px; color: #333; }
+        /* 下ゾーン：アーカイブとしての色合い */
+        .archive-zone { border-top: 1px solid #eee; padding-top: 30px; margin-top: 60px; color: #777; }
         
-        /* ラベルも本文と同じサイズに */
-        .dabun-label { font-size: 16px; color: #666; margin-bottom: 32px; } /* 2行分相当の余白 */
+        .dabun-label { font-size: 16px; margin-bottom: 48px; }
 
-        .archive-heading { font-size: 20px; font-weight: bold; color: #222; margin-bottom: 28px; } /* 1行分相当の余白 */
+        /* 城の完成：色を少し落とし、行頭を1マス空ける */
+        .archive-heading { font-size: 20px; font-weight: bold; color: #555; margin-bottom: 28px; padding-left: 1em; } 
         .archive-content { font-size: 16px; }
 
-        /* キツネ：本文と同じサイズ */
         .fox-exit { text-align: right; margin-top: 40px; }
         .fox-exit a { 
             text-decoration: none; 
             font-size: 18px; 
-            opacity: 0.9;
+            opacity: 0.7;
         }
 
-        /* 作成日：薄すぎないグレー */
-        .footer-date { text-align: center; margin-top: 15px; font-size: 14px; color: #888; }
+        .footer-date { text-align: center; margin-top: 15px; font-size: 14px; color: #999; }
     </style>
 </head>
 <body>
@@ -105,7 +106,7 @@
 
     <div class="archive-zone">
         <div class="dabun-label">↓以下、駄文</div>
-        <div class="archive-heading">城の完成</div>
+        <div class="archive-heading">　城の完成</div>
         <div class="archive-content">
             <p>ここに、私の「、」を刻みます。</p>
             
