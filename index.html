@@ -27,21 +27,21 @@
                 -4px -4px 0 #f8b500, 4px -4px 0 #f8b500, -4px 4px 0 #f8b500, 4px 4px 0 #f8b500;
         }
         
-        .intro { text-align: center; margin: 30px 0; font-size: 15px; }
+        .intro { text-align: center; margin: 30px 0; font-size: 16px; }
         .intro span { display: inline-block; }
 
-        /* 動物行進：1匹目の前に余白(padding-left)を追加 */
+        /* 動物行進：さらに少し大きく（28px） */
         .animal-line { 
             text-align: left; 
-            margin-bottom: -10px; 
-            padding-left: 25px; /* ここで「ひとます」分空けています */
-            font-size: 24px; 
+            margin-bottom: -12px; 
+            padding-left: 25px; 
+            font-size: 28px; 
             letter-spacing: 1px;
             white-space: nowrap;
         }
 
-        /* 概要ボーダー：4pxに細めて存在感を調整 */
-        .border-main { border: 0; border-top: 4px solid #000; margin: 0 0 30px 0; }
+        /* 概要ボーダー：真っ黒から濃いグレー(#444)に落として圧迫感を軽減 */
+        .border-main { border: 0; border-top: 4px solid #444; margin: 0 0 30px 0; }
 
         .category { text-align: left; margin-bottom: 40px; }
         .category h2 { font-size: 19px; padding-left: 12px; border-left: 12px solid #f8b500; line-height: 1.2; margin-bottom: 15px; }
@@ -50,21 +50,25 @@
         .category a { text-decoration: none; color: #0055aa; font-weight: bold; }
 
         /* 下ゾーン */
-        .archive-zone { border-top: 1px solid #eee; padding-top: 30px; margin-top: 60px; color: #666; }
-        /* 駄文ラベル：読みやすさを改善 */
-        .dabun-label { font-size: 14px; color: #888; margin-bottom: 10px; }
-        .archive-heading { font-size: 20px; font-weight: bold; color: #444; margin-bottom: 15px; }
-        .archive-content { font-size: 15px; }
+        /* 区切り線を少し濃く(#ddd)して視認性を確保 */
+        .archive-zone { border-top: 1px solid #ddd; padding-top: 30px; margin-top: 60px; color: #333; }
+        
+        /* ラベルも本文と同じサイズに */
+        .dabun-label { font-size: 16px; color: #666; margin-bottom: 32px; } /* 2行分相当の余白 */
 
-        /* キツネ：16pxにサイズアップ */
-        .fox-exit { text-align: right; margin-top: 30px; }
+        .archive-heading { font-size: 20px; font-weight: bold; color: #222; margin-bottom: 28px; } /* 1行分相当の余白 */
+        .archive-content { font-size: 16px; }
+
+        /* キツネ：本文と同じサイズ */
+        .fox-exit { text-align: right; margin-top: 40px; }
         .fox-exit a { 
             text-decoration: none; 
-            font-size: 16px; 
-            opacity: 0.7;
+            font-size: 18px; 
+            opacity: 0.9;
         }
 
-        .footer-date { text-align: center; margin-top: 10px; font-size: 13px; color: #ccc; }
+        /* 作成日：薄すぎないグレー */
+        .footer-date { text-align: center; margin-top: 15px; font-size: 14px; color: #888; }
     </style>
 </head>
 <body>
@@ -104,6 +108,9 @@
         <div class="archive-heading">城の完成</div>
         <div class="archive-content">
             <p>ここに、私の「、」を刻みます。</p>
+            
+            <p>広告も、ノイズもない。ここが私の、そしてあなたの「1号室」です。</p>
+
             <p>↑これが私が最初に作った文です。</p>
             <p>私というか、AIがですが……。</p>
             <p>はじめてhtmlというのを作ってます。わざわざｐでくくるのが面倒ですね。<br>
