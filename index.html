@@ -3,37 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tanakaarchive</title>
+    <title>田中の部屋</title>
     <style>
-        body {
-            font-family: "Yu Mincho", "MS Mincho", serif;
-            line-height: 1.8;
-            /* 横幅を広げ、余白を削って「1行の文字数」を増やします */
-            max-width: 800px; 
-            margin: 0 auto;
-            padding: 40px 15px; /* 左右の余白を最小限に */
-            color: #222;
-            text-align: justify;
-            text-justify: inter-ideograph;
-            word-wrap: break-word;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 80px;
-            padding: 100px 0;
-        }
-        .header h1 { font-weight: normal; font-size: 28px; letter-spacing: 0.2em; }
+        body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 0 auto; padding: 20px; color: #222; }
         
-        .toc {
-            margin-top: 50px;
-            border-top: 1px solid #eee;
-            padding-top: 30px;
+        /* サイトタイトル：ポップで斬新なフォント指定 */
+        .site-title { 
+            text-align: center; font-size: 40px; margin-top: 50px;
+            font-family: "Arial Black", "HGP創英角ﾎﾟｯﾌﾟ体", sans-serif; 
+            letter-spacing: 0.1em; color: #ff5500; /* 印象的なオレンジ */
         }
-        .toc h2 { font-size: 18px; margin-bottom: 20px; color: #666; }
-        .toc ul { list-style: none; padding: 0; }
-        .toc li { margin-bottom: 20px; }
-        .toc a { 
-            text-decoration: none; 
+        
+        /* 概要：真ん中に寄せる */
+        .intro { text-align: center; margin: 40px 0; padding: 20px; font-size: 16px; }
+
+        /* はっきりとした境界線 */
+        hr { border: 0; border-top: 3px solid #333; margin: 40px 0; }
+
+        /* 作品スペース：左はじめ */
+        .category { text-align: left; margin-bottom: 40px; }
+        .category h2 { border-left: 10px solid #ff5500; padding-left: 15px; font-size: 22px; }
+        .category ul { list-style: none; padding: 0; }
+        .category li { margin: 10px 0; font-size: 18px; }
+        .category a { text-decoration: none; color: #0066cc; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1 class="site-title">田中の部屋</h1>
+
+    <div class="intro">
+        <p>このサイトは、田中の小説や詩を置くところです。<br>
+        よくない表現が、ほんのちょっと入ってるかもしれません。<br>
+        部屋を明るくして、画面からはなれてみてください。<br>
+        わからなかったら、信頼できる大人にきいてください。</p>
+    </div>
+
+    <hr> <div class="category">
+        <h2>小説</h2>
+        <ul>
+            <li><a href="page2.html">小説のタイトル（ここから各話リストへ）</a></li>
+        </ul>
+    </div>
+
+    <div class="category">
+        <h2>詩</h2>
+        <ul>
+            <li><a href="poem1.html">詩のタイトル（直接本文へ飛ばしてもOK）</a></li>
+        </ul>
+    </div>
+
+    <div class="category">
+        <h2>その他</h2>
+        <ul>
+            <li><a href="misc1.html">日記や記録など</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
             color: #000; 
             font-size: 18px; 
             display: block;
