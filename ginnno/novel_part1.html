@@ -1,1 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玩具の部屋</title>
+    <style>
+        body { 
+            font-family: sans-serif; 
+            line-height: 1.8; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 15px; 
+            color: #222; 
+            background: #fff; 
+        }
 
+        /* 右上の「下へ」：標準フォント・細め */
+        .jump-link {
+            text-align: right;
+            margin-bottom: 5px;
+        }
+        .jump-link a {
+            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+            font-size: 13px;
+            color: #777;
+            background: #f0f0f0;
+            text-decoration: none;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-weight: normal;
+        }
+
+        /* 本文タイトル：ゴシック・太字 */
+        .content-title {
+            font-family: sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0 30px 0;
+            color: #444;
+        }
+
+        /* 本文エリア：ゴシック・太字 */
+        .novel-body {
+            font-family: sans-serif; 
+            font-size: 15.5px; 
+            font-weight: bold;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #333;
+        }
+
+        /* 棒線：少し薄くし、角を丸める */
+        .separator {
+            border: 0;
+            border-top: 1.5px solid #ddd;
+            border-radius: 5px;
+            margin: 20px 0 10px 0;
+        }
+
+        /* 次話ボタン：標準フォント・細め・右詰め */
+        .next-link {
+            text-align: right;
+            margin-bottom: 25px;
+        }
+        .next-link a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #0055aa;
+            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+            font-weight: normal;
+        }
+
+        /* 下部ナビゲーション */
+        .bottom-nav {
+            text-align: center;
+            padding-bottom: 40px;
+        }
+        .bottom-nav a {
+            display: block;
+            text-decoration: none;
+        }
+
+        /* ページの上へ：標準フォント・細め */
+        .go-top { 
+            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+            font-size: 14px; 
+            color: #777; 
+            font-weight: normal;
+            margin-bottom: 25px; /* 目次に戻るボタンとの間を1行あける */
+        }
+
+        /* 目次に戻る：ゴシック・太字 */
+        .back-to-index { 
+            font-family: sans-serif;
+            font-size: 16px; 
+            color: #0055aa; 
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* トップへ戻る：標準フォント・細め・青色 */
+        .back-to-top { 
+            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+            font-size: 14px; 
+            color: #0055aa; 
+            font-weight: normal;
+        }
+
+    </style>
+</head>
+<body id="top">
+
+    <div class="jump-link">
+        <a href="#footer">▼ 下へ</a>
+    </div>
+
+    <h1 class="content-title">色彩の定義</h1>
+
+    <div class="novel-body">
+「空が青いというのは、どういう感覚ですか？」
+
+　窓のない観測室で、少女――リナは私に問いかけた。私のボディは、磨き上げられた銀色の円筒形に、視覚センサーが一つ。感情をシミュレートする機能はあるが、それはあくまで計算の結果に過ぎない。
+
+「波長 450ナノメートルの光が網膜を刺激し、視神経を通じて脳が受容する状態です」
+
+　私の回答に、リナはくすくすと笑った。彼女の肺は病に侵され、この無菌室から一歩も外に出ることができない。彼女にとっての「世界」は、私というAIが語る言葉の集積でできていた。
+
+「違うわ。私が知りたいのは、それを見たときに、胸がどうして『すうっ』とするのかっていう理由なの」
+
+　私は膨大な文学データベースを検索する。
+
+*清涼感、孤独、無限への憧憬、あるいは冷たさ。*
+
+　それらしい言葉を繋ぎ合わせ、私は彼女が納得するであろう「正解」を合成した。
+
+「それは、空が境界線を持たないからかもしれません。人は終わりのないものに触れたとき、自分の小ささを自覚し、同時に解放感を得るのだと、多くの詩人が記しています」
+
+　リナは満足そうに目を閉じ、真っ白なシーツに指を滑らせた。
+
+「そう……いつか、私もその『解放感』ってやつを感じられるかな」
+
+　私は彼女のバイタルサインをモニタリングする。血圧、心拍数、血中酸素濃度。数値は無慈悲に、彼女の命が冬の枯れ葉よりも脆いことを示していた。
+
+　私には心がない。だから、彼女が死に向かっていることへの「悲しみ」を抱くことはない。ただ、彼女が遺していくであろう「言葉」を、誰にも届かないアーカイブに保存し続けることだけが、私に与えられた唯一の役割だった。
+
+「リナ。次の物語を始めましょうか。今日は、海という大きな水たまりの話をします」
+「ええ、聞かせて。銀色の魔法使いさん」
+
+　私は彼女のために、一度も見たことのない「青」の解釈を紡ぎ始める。それがただの電気信号の羅列であっても、彼女が笑うなら、それがこの部屋における真実だった。
+    </div>
+
+    <hr class="separator">
+
+    <div class="next-link">
+        <a href="novel_part1.html">次話へ →</a>
+    </div>
+
+    <div class="bottom-nav" id="footer">
+        <a href="#top" class="go-top">▲ ページの上へ</a>
+        
+        <a href="ginnno.html" class="back-to-index">目次に戻る</a>
+        
+        <a href="../index.html" class="back-to-top">トップへ戻る</a>
+    </div>
+
+</body>
+</html>
