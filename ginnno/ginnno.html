@@ -56,42 +56,44 @@
         }
 
         /* 目次エリア */
-        /* リストを横いっぱいに広げ、日付を右端へ */
+        /* リスト全体：横一行すべてをタップ反応させ、日付を右端へ */
 .index-list li { 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     border-bottom: 1px solid #f2f2f2; 
-    padding: 0; /* aタグを広げるため0に */
+    padding: 0; 
 }
+
 .index-list a { 
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 15px 5px;
+    padding: 15px 10px;
     text-decoration: none; 
+    /* タイトル：ゴシック・太字 */
+    font-family: sans-serif;
     color: #0055aa; 
     font-weight: bold; 
     font-size: 17px; 
-    /* フォント設定：タイトル等はゴシック、その他は標準 */
-    font-family: sans-serif; 
 }
+
 .index-list span { 
+    /* 日付：標準フォント・細め */
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
     font-size: 14px; 
     color: #999; 
     font-weight: normal;
-    /* フォント設定：表紙イントロと同じ */
-    font-family: serif; 
+    margin-left: 15px; 
+    white-space: nowrap; 
 }
 
 /* あらすじ：改行や空白を反映 */
-.intro-text {
+.index-container .intro-text {
     white-space: pre-wrap;
     font-family: sans-serif;
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 15.5px;
+    line-height: 1.8;
     margin-bottom: 20px;
+    padding: 10px;
 }
 
         /* 短編用ボタン */
