@@ -15,99 +15,36 @@
             background: #fff; 
         }
 
-        /* 右上の「下へ」：標準フォント・細め */
-        .jump-link {
-            text-align: right;
-            margin-bottom: 5px;
-        }
-        .jump-link a {
-            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
-            font-size: 13px;
-            color: #777;
-            background: #f0f0f0;
-            text-decoration: none;
-            padding: 5px 12px;
-            border-radius: 4px;
-            font-weight: normal;
-        }
-
-        /* 本文タイトル：ゴシック・太字 */
+        /* 本文タイトル：text-indentで自動的に一マス空ける */
         .content-title {
             font-family: sans-serif;
             font-size: 20px;
             font-weight: bold;
             margin: 10px 0 30px 0;
             color: #444;
-            text-indent: 1em;
+            text-indent: 1em; /* これでタイトルの1文字目が自動で空きます */
         }
 
-        /* 本文エリア：ゴシック・太字 */
+        /* 本文エリア */
         .novel-body {
             font-family: sans-serif; 
-            font-size: 15.5px; 
-            font-weight: bold;
-            white-space: pre-wrap;
+            font-size: 15px;
+            white-space: pre-wrap; /* 手動で入れた空白や改行をそのまま出す設定 */
             word-wrap: break-word;
             color: #333;
         }
 
-        /* 棒線：少し薄くし、角を丸める */
-        .separator {
-            border: 0;
-            border-top: 1.5px solid #ddd;
-            border-radius: 5px;
-            margin: 20px 0 10px 0;
-        }
-
-        /* 次話ボタン：標準フォント・細め・右詰め */
-        .next-link {
-            text-align: right;
-            margin-bottom: 25px;
-        }
-        .next-link a {
-            text-decoration: none;
-            font-size: 16px;
-            color: #0055aa;
-            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
-            font-weight: normal;
-        }
-
-        /* 下部ナビゲーション */
-        .bottom-nav {
-            text-align: center;
-            padding-bottom: 40px;
-        }
-        .bottom-nav a {
-            display: block;
-            text-decoration: none;
-        }
-
-        /* ページの上へ：標準フォント・細め */
-        .go-top { 
-            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
-            font-size: 14px; 
-            color: #777; 
-            font-weight: normal;
-            margin-bottom: 25px; /* 目次に戻るボタンとの間を1行あける */
-        }
-
-        /* 目次に戻る：ゴシック・太字 */
-        .back-to-index { 
-            font-family: sans-serif;
-            font-size: 16px; 
-            color: #0055aa; 
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        /* トップへ戻る：標準フォント・細め・青色 */
-        .back-to-top { 
-            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
-            font-size: 14px; 
-            color: #0055aa; 
-            font-weight: normal;
-        }
-
+        /* その他ナビゲーション設定（共通） */
+        .jump-link { text-align: right; margin-bottom: 5px; }
+        .jump-link a { font-family: sans-serif; font-size: 13px; color: #777; background: #f0f0f0; text-decoration: none; padding: 5px 12px; border-radius: 4px; }
+        .separator { border: 0; border-top: 1.5px solid #ddd; border-radius: 5px; margin: 20px 0 10px 0; }
+        .nav-links { display: flex; justify-content: space-between; margin-bottom: 25px; }
+        .nav-links a { text-decoration: none; font-size: 16px; color: #0055aa; }
+        .bottom-nav { text-align: center; padding-bottom: 40px; }
+        .bottom-nav a { display: block; text-decoration: none; margin-bottom: 15px; }
+        .go-top { font-size: 14px; color: #777; }
+        .back-to-index { font-weight: bold; font-size: 16px; color: #0055aa; }
+        .back-to-top { font-size: 14px; color: #0055aa; }
     </style>
 </head>
 <body id="top">
@@ -116,7 +53,7 @@
         <a href="#footer">▼ 下へ</a>
     </div>
 
-    <h1 class="content-title">色彩の定義</h1>
+    <h1 class="content-title">## 第1話：色彩の定義</h1>
 
     <div class="novel-body">
 「空が青いというのは、どういう感覚ですか？」
@@ -149,20 +86,19 @@
 「ええ、聞かせて。銀色の魔法使いさん」
 
 　私は彼女のために、一度も見たことのない「青」の解釈を紡ぎ始める。それがただの電気信号の羅列であっても、彼女が笑うなら、それがこの部屋における真実だった。
+
     </div>
 
     <hr class="separator">
 
-    <div class="next-link">
-        <a href="novel_part0.html">前話へ →</a>
-        <a href="novel_part2.html">次話へ →</a>
+    <div class="nav-links">
+        <a href="page0.html">← 前話へ</a>
+        <a href="page2.html">次話へ →</a>
     </div>
 
     <div class="bottom-nav" id="footer">
         <a href="#top" class="go-top">▲ ページの上へ</a>
-        
         <a href="ginnno.html" class="back-to-index">目次に戻る</a>
-        
         <a href="../index.html" class="back-to-top">トップへ戻る</a>
     </div>
 
