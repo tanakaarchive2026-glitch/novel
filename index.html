@@ -39,27 +39,29 @@
             white-space: nowrap;
         }
 
+        /* 境界線：下の余白を広げました */
         .border-main { 
             border: 0; 
             border-top: 3px solid #666; 
             border-radius: 2px;
-            margin: 0 0 30px 0; 
+            margin: 0 0 50px 0; 
         }
 
         .category { text-align: left; margin-bottom: 40px; }
         .category h2 { font-size: 20px; padding-left: 12px; border-left: 12px solid #f8b500; line-height: 1.2; margin-bottom: 15px; }
         
-        /* 小説内の小見出し */
-        .subcategory { font-weight: bold; font-size: 17px; margin: 15px 0 5px 40px; color: #444; }
+        .subcategory { font-weight: bold; font-size: 16px; margin: 15px 0 5px 20px; color: #666; }
         
-        .category ul { list-style: disc; padding-left: 60px; margin-top: 5px; }
+        .category ul { list-style: disc; padding-left: 45px; margin-top: 5px; }
+        .category ul li::marker { font-size: 0.8em; color: #888; }
         .category li { margin: 8px 0; font-size: 16px; }
         .category a { text-decoration: none; color: #0055aa; font-weight: bold; }
 
+        /* 下ゾーン全体 */
         .archive-zone { border-top: 1px solid #eee; padding-top: 30px; margin-top: 60px; }
         .dabun-label { font-size: 16px; color: #777; margin-bottom: 48px; }
         .archive-heading { font-size: 20px; font-weight: bold; color: #555; margin-bottom: 28px; padding-left: 1em; } 
-        .archive-content { font-size: 16px; color: #666; }
+        .archive-content { font-size: 16px; color: #555; }
 
         .footer-date { text-align: center; margin-top: 30px; font-size: 14px; color: #aaa; }
         .footer-date a { text-decoration: none; opacity: 0.7; margin-left: 8px; font-size: 18px; }
@@ -84,13 +86,13 @@
 
     <div class="category">
         <h2>小説</h2>
-        <div class="subcategory">■ 長編</div>
+        <div class="subcategory">長編</div>
         <ul>
-            <li><a href="page2.html">長編作品のタイトル</a></li>
+            <li><a href="page2.html">作品のタイトル</a></li>
         </ul>
-        <div class="subcategory">■ 短編</div>
+        <div class="subcategory">短編</div>
         <ul>
-            <li><a href="short1.html">短編作品のタイトル</a></li>
+            <li><a href="short1.html">作品のタイトル</a></li>
         </ul>
     </div>
 
@@ -114,6 +116,7 @@
         <div class="archive-content">
             <p>ここに、私の「、」を刻みます。</p>
             <p>広告も、ノイズもない。ここが私の、そしてあなたの「1号室」です。</p>
+            <br>
             <p>↑これが私が最初に作った文です。</p>
             <p>私というか、AIがですが……。</p>
             <p>はじめてhtmlというのを作ってます。わざわざｐでくくるのが面倒ですね。<br>
@@ -128,6 +131,7 @@
             <p>上記のノイズだの１号室だの言ってるのは、AIに「，」がイヤだから「、」にしてとお願いして作らせた文です。作らせたというか、勝手にAIが作りました。</p>
             <p>デジタルって難しいですね。</p>
             <p>もし私がこの文字だけになったら、挫折したと思ってください。なんかほかの文とか増えてたら、頑張ってる最中なんだって思ってください。</p>
+            <br>
             <p>私はいま、ここにいます。</p>
         </div>
     </div>
