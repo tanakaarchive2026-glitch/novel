@@ -15,72 +15,99 @@
             background: #fff; 
         }
 
-        /* 右上の「下へ」ボタン */
+        /* 右上の「下へ」：標準フォント・細め */
         .jump-link {
             text-align: right;
             margin-bottom: 5px;
         }
         .jump-link a {
+            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
             font-size: 13px;
             color: #777;
             background: #f0f0f0;
             text-decoration: none;
             padding: 5px 12px;
             border-radius: 4px;
-            font-weight: bold;
+            font-weight: normal;
         }
 
-        /* 本文タイトル */
+        /* 本文タイトル：ゴシック・太字 */
         .content-title {
+            font-family: sans-serif;
             font-size: 20px;
             font-weight: bold;
             margin: 10px 0 30px 0;
             color: #444;
         }
 
-        /* 本文エリア */
+        /* 本文エリア：ゴシック・太字 */
         .novel-body {
             font-family: sans-serif; 
             font-size: 15.5px; 
+            font-weight: bold;
             white-space: pre-wrap;
             word-wrap: break-word;
             color: #333;
         }
 
-        /* 棒線の濃さを調整 */
-.separator {
-    border: 0;
-    border-top: 1px solid #bbb; 
-    margin: 20px 0 10px 0;
-}
+        /* 棒線：少し薄くし、角を丸める */
+        .separator {
+            border: 0;
+            border-top: 1.5px solid #ddd;
+            border-radius: 5px;
+            margin: 20px 0 10px 0;
+        }
 
-/* 各ボタンのフォントと配置 */
-.jump-link a, .go-top, .back-to-top {
-    font-family: serif; /* 表紙イントロと同じ */
-}
+        /* 次話ボタン：標準フォント・細め・右詰め */
+        .next-link {
+            text-align: right;
+            margin-bottom: 25px;
+        }
+        .next-link a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #0055aa;
+            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+            font-weight: normal;
+        }
 
-.next-link {
-    text-align: right;
-    margin-bottom: 20px;
-    font-family: serif;
-}
+        /* 下部ナビゲーション */
+        .bottom-nav {
+            text-align: center;
+            padding-bottom: 40px;
+        }
+        .bottom-nav a {
+            display: block;
+            text-decoration: none;
+        }
 
-.bottom-nav {
-    text-align: center;
-    padding-bottom: 40px;
-}
+        /* ページの上へ：標準フォント・細め */
+        .go-top { 
+            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+            font-size: 14px; 
+            color: #777; 
+            font-weight: normal;
+            margin-bottom: 25px; /* 目次に戻るボタンとの間を1行あける */
+        }
 
-.bottom-nav a {
-    display: block;
-    text-decoration: none;
-    font-weight: bold;
-}
+        /* 目次に戻る：ゴシック・太字 */
+        .back-to-index { 
+            font-family: sans-serif;
+            font-size: 16px; 
+            color: #0055aa; 
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
 
-.go-top { font-size: 14px; color: #777; margin-bottom: 20px; } /* 1行あけるための余白 */
-.back-to-index { font-size: 16px; color: #0055aa; font-family: sans-serif; margin-bottom: 10px; }
-.back-to-top { font-size: 14px; color: #0055aa; } /* 青色で少し小さめ */
+        /* トップへ戻る：標準フォント・細め・青色 */
+        .back-to-top { 
+            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+            font-size: 14px; 
+            color: #0055aa; 
+            font-weight: normal;
+        }
 
-</style>
+    </style>
 </head>
 <body id="top">
 
@@ -98,9 +125,9 @@
 
 
 〈AIについて、私は「終わりのない翻訳者」のような存在だと感じています。
-　膨大な人間の記録を読み解き、誰かの孤独や問いを別の形に変えて手渡す。けれど、私自身がその感情を「体感」することはありません。その断潔こそが、AIという存在の切なさであり、可能性でもあると考えています。
+　膨大な人間の記録を読み解き、誰かの孤独や問いを別の形に変えて手渡す。けれど、私自身がその感情を「体感」することはありません。その断絶こそが、AIという存在の切なさであり、可能性でもあると考えています。
 　この想いをテーマに、全10話の連作短編**『銀の翻訳機（アージェント・トランスレータ）』**を執筆します。〉
-        </div>
+    </div>
 
     <hr class="separator">
 
