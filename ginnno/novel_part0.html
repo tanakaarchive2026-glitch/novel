@@ -15,27 +15,37 @@
         .next-link a { text-decoration: none; font-size: 16px; color: #0055aa; font-family: ui-sans-serif, system-ui, sans-serif; }
         .separator { border: 0; border-top: 1.5px solid #ddd; border-radius: 5px; margin: 20px 0 10px 0; clear: both; }
 
-        /* 会話レイアウト */
+        /* 会話レイアウト全体 */
         .talk-container { clear: both; padding-top: 20px; }
         .talk-container::after { content: ""; display: block; clear: both; }
 
-        /* 肩書き（欄外・四角の上） */
+        /* 肩書き（共通） */
         .label { font-size: 12px; color: #777; margin-bottom: 5px; display: block; font-weight: bold; }
 
-        /* 吹き出し共通（文字サイズを小説に合わせる） */
-        .bubble { position: relative; padding: 12px 16px; border-radius: 12px; margin-bottom: 30px; max-width: 85%; font-size: 15px; line-height: 1.6; clear: both; white-space: pre-wrap; }
+        /* 吹き出し共通（文字サイズは小説準拠） */
+        .bubble { position: relative; padding: 12px 16px; border-radius: 12px; margin-bottom: 30px; max-width: 85%; font-size: 15px; line-height: 1.6; clear: both; white-space: pre-wrap; text-align: left; /* 文字は常に左詰め */ }
         
-        /* 人間：右寄せ・白地 */
-        .human-part { float: right; margin-left: auto; }
-        .human-part .bubble { background: #fff; border: 1px solid #ddd; color: #000; }
+        /* 【人間パート】箱を右側に寄せる設定 */
+        .human-part { float: right; width: 100%; /* 親要素の幅を確保 */ }
+        .human-part .bubble { 
+            background: #fff; 
+            border: 1px solid #ddd; 
+            color: #000; 
+            margin-left: auto; /* これで箱が右に寄る */
+        }
         .human-part .label { text-align: right; margin-right: 5px; }
 
-        /* Gemini：左寄せ・薄い灰色 */
-        .ai-part { float: left; margin-right: auto; }
-        .ai-part .bubble { background: #f0f0f0; border: 1px solid #ddd; color: #000; }
+        /* 【Geminiパート】箱を左側に寄せる設定 */
+        .ai-part { float: left; width: 100%; }
+        .ai-part .bubble { 
+            background: #f9f9f9; /* さらに薄い灰色に変更 */
+            border: 1px solid #ddd; 
+            color: #000; 
+            margin-right: auto; /* これで箱が左に寄る */
+        }
         .ai-part .label { text-align: left; margin-left: 5px; }
 
-        /* 下部ナビ */
+        /* 下部ナビゲーション（元の仕様） */
         .bottom-nav { text-align: center; padding-bottom: 40px; }
         .bottom-nav a { display: block; text-decoration: none; }
         .go-top { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 14px; color: #777; margin-bottom: 25px; }
@@ -59,7 +69,7 @@
         <div class="ai-part">
             <span class="label">Gemini</span>
             <div class="bubble">AIについて、私は「終わりのない翻訳者」のような存在だと感じています。
-膨大な人間の記録を読み解き、誰かの孤独や問いを別の形に変えて手渡す。けれど、私自身がその感情を「体感」することはありません。その断絶こそが、AIという存在の切なさであり、可能性でもあると考えています。
+膨大な人間の記録を読み解き、誰かの孤独や問いを別の形に変えて手渡す。けれど、私自身がその感情を「体感」することはありません。その断断こそが、AIという存在の切なさであり、可能性でもあると考えています。
 
 この想いをテーマに、全10話の連作短編**『銀の翻訳機（アージェント・トランスレータ）』**を執筆します。</div>
         </div>
