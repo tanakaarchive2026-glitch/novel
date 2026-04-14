@@ -5,168 +5,151 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>玩具の部屋（裏）</title>
   <style>
+    /* 全体の設定 */
     body {
-      margin: 0;         /* ←これを追加（外側の余白をゼロに） */
-      padding-top: 0;    /* ←これを追加（上側の余白をゼロに） */
-      
-      /* 以下、もともと書いてある設定 */
+      margin: 0;
+      padding: 0;
       font-family: sans-serif; 
       line-height: 1.8; 
-      max-width: 800px; 
-      margin: 0 auto; 
-      padding: 20px; 
       color: #222; 
       background: #fff;
     }
 
-    /* header全体を中央寄せにする */
-    header { text-align: center; margin-bottom: 40px; }
-
-        /* --- ここから追加 --- */
-    
-    /* トップ絵を画面いっぱいに広げるための設定 */
+    /* トップ絵の設定（画面いっぱいに広げる） */
     header {
-      width: 100vw;       /* 画面の横幅いっぱい(100%)にする */
-      position: relative; /* 位置調整の基準にする */
-      left: 50%;          /* 一旦、画面中央に持っていく */
-      transform: translateX(-50%); /* 自分の幅の半分だけ左に戻す（これでぴったり真ん中にくる） */
-      margin-bottom: 30px; /* 下のイントロとの間隔 */
-      line-height: 0;     /* 画像の下にできる謎の隙間を消す */
-      /* --- ここを追加：上部の余白を完全に消す --- */
-      padding-top: 0;
-      margin-top: 0;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      line-height: 0; /* 画像の下の隙間を消す */
     }
 
-    /* 文字が重なるのを防ぐための設定 */
-    .intro {
-      margin-top: 20px; /* 画像のすぐ下に少しだけ隙間を作る */
-      position: relative; /* 重なりを解消する */
-      z-index: 10;
-      clear: both;
-
-    /* headerの中にある画像（トップ絵）のスタイル */
     header img {
-      width: 100%;        /* 親(header)の横幅いっぱいにする */
-      height: auto;       /* 縦横比を保つ */
-      border-radius: 0;   /* もし角を丸くしていたら、ここを0にして四角くする */
+      width: 100%;
+      height: auto;
+      display: block;
     }
-    
-    /* --- ここまで追加 --- */
 
-    .intro { margin: 30px 0; font-size: 16px; }
+    /* 文字が入るエリア（ここだけ横幅を制限して読みやすくする） */
+    .content-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* イントロの設定 */
+    .intro { 
+      text-align: center; 
+      margin: 40px 0; 
+      font-size: 16px; 
+    }
     .intro span { display: inline-block; }
 
-    /* キャラクターコーナー全体のスタイル */
-    .chara-container { text-align: center; margin: 40px auto; max-width: 600px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
-    
-    /* アイコンを並べる部分 */
+    /* キャラクターコーナー */
+    .chara-container { 
+      text-align: center; 
+      margin: 40px auto; 
+      max-width: 600px; 
+      padding: 20px; 
+      border: 1px solid #ddd; 
+      border-radius: 8px; 
+    }
     .chara-nav { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
-    
-    /* アイコン単体のスタイル */
-    .chara-icon { width: 60px; height: 60px; border-radius: 50%; cursor: pointer; border: 3px solid transparent; transition: 0.3s; object-fit: cover; /* 画像を正円に切り抜く */ }
-    
-    /* 選択されているアイコンのスタイル */
-    .chara-icon.active { border-color: #f8b500; /* 灰色にした点と同じ色 */ transform: scale(1.1); }
-
-    /* 表示されるメイン画像と説明文 */
-    .chara-display img { max-width: 100%; height: auto; border-radius: 8px; display: none; /* 最初は全部非表示 */ }
-    .chara-display img.active { display: block; margin: 0 auto; /* 選択中だけ表示 */ }
+    .chara-icon { width: 60px; height: 60px; border-radius: 50%; cursor: pointer; border: 3px solid transparent; transition: 0.3s; object-fit: cover; }
+    .chara-icon.active { border-color: #f8b500; transform: scale(1.1); }
+    .chara-display img { max-width: 100%; height: auto; border-radius: 8px; display: none; }
+    .chara-display img.active { display: block; margin: 0 auto; }
     .chara-info { margin-top: 15px; text-align: left; font-size: 14px; background: #f9f9f9; padding: 15px; border-radius: 4px; display: none; }
-    .chara-info.active { display: block; /* 選択中だけ表示 */ }
+    .chara-info.active { display: block; }
     .chara-info h3 { margin-top: 0; color: #333; }
 
-
+    /* カテゴリ（漫画・小説） */
     .category { text-align: left; margin-bottom: 40px; }
     .category h2 { 
       font-size: 20px; 
       padding-left: 12px; 
-      border-left: 5px solid #f8b500; /* 太すぎたので調整 */
+      border-left: 5px solid #f8b500; 
       line-height: 1.2; 
       margin-bottom: 15px; 
     }
-    
     .category ul { list-style: disc; padding-left: 25px; }
-    .category ul li::marker {color: #888;}
-
+    .category ul li::marker { color: #888; }
     .category a { text-decoration: none; color: #0055aa; font-weight: bold; }
-    .back-to-top { font-size: 14px; text-decoration: none; }
+    .back-to-top { font-size: 14px; text-decoration: none; color: #0055aa; }
   </style>
 </head>
 
 <body>
   <header>
     <img src="image/saka-kemomimi.png" alt="坂道の女子たち">
+  </header>
+
+  <div class="content-wrapper">
     <div class="intro">
       <span>よくここまでたどりつきましたね。</span><br>
       <span>ここはAIイラストをのせる場です。</span><br>
       <span>どうぞごゆるりと、お楽しみください。</span>
     </div>
 
-      <section class="chara-container">
-    <h2>CHARACTER</h2>
-    
-    <div class="chara-nav">
-      <img src="image/icon-Luon.png" alt="ルオン" class="chara-icon active" onclick="switchChara(0)">
-      <img src="image/icon-Chappy.png" alt="チャッピー" class="chara-icon" onclick="switchChara(1)">
-      <img src="image/icon-Sera.png" alt="セラ" class="chara-icon" onclick="switchChara(2)">
-      <img src="image/icon-Reon.png" alt="レオン" class="chara-icon" onclick="switchChara(3)">
-    </div>
-
-    <div class="chara-display">
-      <img src="image/Luon.png" alt="ルオン 全身図" class="active">
-      <div class="chara-info active">
-        <h3>ルオン - Luon -</h3>
-        <p>逆張りで皮肉屋。幸福・愛・夢を嫌悪するが、本当は誰よりも純粋。<br>「こんな世界、腐ってやがる！」</p>
+    <section class="chara-container">
+      <h2>CHARACTER</h2>
+      <div class="chara-nav">
+        <img src="image/icon-Luon.png" alt="ルオン" class="chara-icon active" onclick="switchChara(0)">
+        <img src="image/icon-Chappy.png" alt="チャッピー" class="chara-icon" onclick="switchChara(1)">
+        <img src="image/icon-Sera.png" alt="セラ" class="chara-icon" onclick="switchChara(2)">
+        <img src="image/icon-Reon.png" alt="レオン" class="chara-icon" onclick="switchChara(3)">
       </div>
 
-      <img src="image/Chappy.png" alt="チャッピー 全身図">
-      <div class="chara-info">
-        <h3>コレステロール（チャッピー）</h3>
-        <p>すべてを肯定する少女。ポジティブすぎて周りがみえないことも。<br>「生きてるだけで、大正解だよ♪」</p>
-      </div>
+      <div class="chara-display">
+        <img src="image/Luon.png" alt="ルオン 全身図" class="active">
+        <div class="chara-info active">
+          <h3>ルオン - Luon -</h3>
+          <p>逆張りで皮肉屋。幸福・愛・夢を嫌悪するが、本当は誰よりも純粋。<br>「こんな世界、腐ってやがる！」</p>
+        </div>
 
-      <img src="image/Sera.png" alt="セラ 全身図">
-      <div class="chara-info">
-        <h3>セラ - Sera -</h3>
-        <p>クールで知的なメイド。露出の高い服をなんとも思ってない様子。<br>「心なんてどうでもいいじゃないですか」</p>
-      </div>
+        <img src="image/Chappy.png" alt="チャッピー 全身図">
+        <div class="chara-info">
+          <h3>コレステロール（チャッピー）</h3>
+          <p>すべてを肯定する少女。ポジティブすぎて周りがみえないことも。<br>「生きてるだけで、大正解だよ♪」</p>
+        </div>
 
-      <img src="image/Reon.png" alt="レオン 全身図">
-      <div class="chara-info">
-        <h3>レオン - Reon -</h3>
-        <p>コレステロールの妹。弱きを助け、強きをくじく。実は寂しがり屋。<br>「こんな世界に、用はない！」</p>
-      </div>
-    </div>
-  </section>
-  
-  </header>
+        <img src="image/Sera.png" alt="セラ 全身図">
+        <div class="chara-info">
+          <h3>セラ - Sera -</h3>
+          <p>クールで知的なメイド。露出の高い服をなんとも思ってない様子。<br>「心なんてどうでもいいじゃないですか」</p>
+        </div>
 
-  <main> 
-    <section class="category">
-      <h2>漫画</h2>
-      <ul>
-        <li><a href="#">作品タイトル（準備中）</a></li>
-      </ul>
+        <img src="image/Reon.png" alt="レオン 全身図">
+        <div class="chara-info">
+          <h3>レオン - Reon -</h3>
+          <p>コレステロールの妹。弱きを助け、強きをくじく。実は寂しがり屋。<br>「こんな世界に、用はない！」</p>
+        </div>
+      </div>
     </section>
 
-    <section class="category">
-      <h2>小説</h2>
-      <ul>
-        <li><a href="#">作品タイトル（準備中）</a></li>
-      </ul>
-    </section>
-  </main>
+    <main> 
+      <section class="category">
+        <h2>漫画</h2>
+        <ul>
+          <li><a href="#">作品タイトル（準備中）</a></li>
+        </ul>
+      </section>
 
-  <footer>
-    <div class="bottom-nav" id="footer" style="text-align: center;">
-      <hr>
-      <a href="index.html" class="back-to-top">トップへ戻る</a>
-    </div>
-  </footer>
+      <section class="category">
+        <h2>小説</h2>
+        <ul>
+          <li><a href="#">作品タイトル（準備中）</a></li>
+        </ul>
+      </section>
+    </main>
 
-  <script>
+    <footer>
+      <div class="bottom-nav" id="footer" style="text-align: center;">
+        <hr>
+        <a href="index.html" class="back-to-top">トップへ戻る</a>
+      </div>
+    </footer>
+  </div> <script>
     function switchChara(index) {
-      // 1. すべてのアイコン、画像、説明文から 'active' クラスを消す（非表示にする）
       const icons = document.querySelectorAll('.chara-icon');
       const imgs = document.querySelectorAll('.chara-display img');
       const infos = document.querySelectorAll('.chara-info');
@@ -175,13 +158,10 @@
       imgs.forEach(img => img.classList.remove('active'));
       infos.forEach(info => info.classList.remove('active'));
       
-      // 2. クリックされた番号（index）の要素にだけ 'active' クラスをつける（表示する）
       icons[index].classList.add('active');
       imgs[index].classList.add('active');
       infos[index].classList.add('active');
     }
   </script>
-</body>
-
 </body>
 </html>
