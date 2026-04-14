@@ -31,17 +31,24 @@
         .jump-link { text-align: right; margin-bottom: 5px; }
         .jump-link a { font-family: sans-serif; font-size: 13px; color: #777; background: #f0f0f0; text-decoration: none; padding: 5px 12px; border-radius: 4px; }
         .separator { border: 0; border-top: 1.5px solid #ddd; border-radius: 5px; margin: 20px 0 10px 0; }
-        .nav-links { 
+        /* 外枠：とにかく横いっぱいに広がる箱 */
+.nav-links { 
     display: flex; 
-    justify-content: space-between; 
+    width: 100%;
     margin-bottom: 25px;
 }
 
-/* 「次話へ」だけがあるとき、それを右に押し出す魔法 */
-.nav-links a:only-child:last-child {
-    margin-left: auto;
+/* 前話へ：常に左にいたい */
+.prev-button { 
+    text-decoration: none; 
+    margin-right: auto; /* 右側をガバーっと空けて、自分は左に残る */
 }
 
+/* 次話へ：常に右にいたい */
+.next-button { 
+    text-decoration: none; 
+    margin-left: auto; /* 左側をガバーっと空けて、自分を右に押し出す */
+}
         .nav-links a { text-decoration: none; font-size: 16px; color: #0055aa; }
         .bottom-nav { text-align: center; padding-bottom: 40px; }
         .bottom-nav a { display: block; text-decoration: none; }
