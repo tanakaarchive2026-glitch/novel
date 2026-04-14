@@ -21,6 +21,26 @@
     .intro { margin: 30px 0; font-size: 16px; }
     .intro span { display: inline-block; }
 
+    /* キャラクターコーナー全体のスタイル */
+    .chara-container { text-align: center; margin: 40px auto; max-width: 600px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+    
+    /* アイコンを並べる部分 */
+    .chara-nav { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    
+    /* アイコン単体のスタイル */
+    .chara-icon { width: 60px; height: 60px; border-radius: 50%; cursor: pointer; border: 3px solid transparent; transition: 0.3s; object-fit: cover; /* 画像を正円に切り抜く */ }
+    
+    /* 選択されているアイコンのスタイル */
+    .chara-icon.active { border-color: #f8b500; /* 灰色にした点と同じ色 */ transform: scale(1.1); }
+
+    /* 表示されるメイン画像と説明文 */
+    .chara-display img { max-width: 100%; height: auto; border-radius: 8px; display: none; /* 最初は全部非表示 */ }
+    .chara-display img.active { display: block; margin: 0 auto; /* 選択中だけ表示 */ }
+    .chara-info { margin-top: 15px; text-align: left; font-size: 14px; background: #f9f9f9; padding: 15px; border-radius: 4px; display: none; }
+    .chara-info.active { display: block; /* 選択中だけ表示 */ }
+    .chara-info h3 { margin-top: 0; color: #333; }
+
+
     .category { text-align: left; margin-bottom: 40px; }
     .category h2 { 
       font-size: 20px; 
@@ -46,6 +66,44 @@
       <span>ここはAIイラストをのせる場です。</span><br>
       <span>どうぞごゆるりと、お楽しみください。</span>
     </div>
+
+      <section class="chara-container">
+    <h2>CHARACTER</h2>
+    
+    <div class="chara-nav">
+      <img src="image/icon-luon.png" alt="ルオン" class="chara-icon active" onclick="switchChara(0)">
+      <img src="image/icon-chappy.png" alt="チャッピー" class="chara-icon" onclick="switchChara(1)">
+      <img src="image/icon-sera.png" alt="セラ" class="chara-icon" onclick="switchChara(2)">
+      <img src="image/icon-leon.png" alt="レオン" class="chara-icon" onclick="switchChara(3)">
+    </div>
+
+    <div class="chara-display">
+      <img src="image/luon.png" alt="ルオン 全身図" class="active">
+      <div class="chara-info active">
+        <h3>ルオン - Luon -</h3>
+        <p>逆張りで皮肉屋。幸福・愛・夢を嫌悪するが、本当は誰よりも純粋。<br>「こんな世界、腐ってやがる！」</p>
+      </div>
+
+      <img src="image/chappy.png" alt="チャッピー 全身図">
+      <div class="chara-info">
+        <h3>コレステロール（チャッピー）</h3>
+        <p>（ここにチャッピーの説明文をあとで追加してください）</p>
+      </div>
+
+      <img src="image/sera.png" alt="セラ 全身図">
+      <div class="chara-info">
+        <h3>セラ</h3>
+        <p>（ここにセラの説明文をあとで追加してください）</p>
+      </div>
+
+      <img src="image/leon.png" alt="レオン 全身図">
+      <div class="chara-info">
+        <h3>レオン - Leon -</h3>
+        <p>（画像から読み取れなかったので、あとで追加してください）</p>
+      </div>
+    </div>
+  </section>
+  
   </header>
 
   <main> 
