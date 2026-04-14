@@ -32,8 +32,30 @@ body {
         .separator { border: 0; border-top: 1.5px solid #ddd; border-radius: 5px; margin: 20px 0 10px 0; }
         .nav-links { display: flex; justify-content: space-between; margin-bottom: 25px; }
         .nav-links a { text-decoration: none; font-size: 16px; color: #0055aa; }
+/* 下部ナビゲーション設定 */
         .bottom-nav { text-align: center; padding-bottom: 40px; }
-        .bottom-nav a { display: block; text-decoration: none; margin-bottom: 15px; }
-        .go-top { font-size: 14px; color: #777; }
-        .back-to-index { font-weight: bold; font-size: 16px; color: #0055aa; }
-        .back-to-top { font-size: 14px; color: #0055aa; }
+        .bottom-nav a { display: block; text-decoration: none; } /* ここから margin-bottom を消しました */
+
+        /* ページの上へ：ここを25pxにするのがポイント */
+        .go-top { 
+            font-family: ui-sans-serif, system-ui, sans-serif;
+            font-size: 14px; 
+            color: #777; 
+            margin-bottom: 25px; 
+        }
+
+        /* 目次に戻る：ここは15px */
+        .back-to-index { 
+            font-family: sans-serif;
+            font-weight: bold; 
+            font-size: 16px; 
+            color: #0055aa; 
+            margin-bottom: 15px; 
+        }
+
+        /* トップへ戻る */
+        .back-to-top { 
+            font-family: ui-sans-serif, system-ui, sans-serif;
+            font-size: 14px; 
+            color: #0055aa; 
+        }
