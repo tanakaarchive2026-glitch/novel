@@ -1,81 +1,25 @@
-/* --- AI対話専用シール --- */
+/* --- AI対話（制作記録）用：貼り直し用 --- */
 
-/* 会話全体のコンテナ */
-.talk-container { 
-    clear: both; 
-    padding-top: 20px; 
-    width: 100%;
-}
-.talk-container::after { 
-    content: ""; 
-    display: block; 
-    clear: both; 
+/* 1. 編集者の言葉：真ん中に寄せて、濃く、大きくする */
+.editor {
+    text-align: center;
+    font-size: 1.2em;
+    color: #000;
+    margin: 30px 0;
 }
 
-/* 肩書き（共通） */
-.label { 
-    font-size: 12px; 
-    color: #777; 
-    margin-bottom: 5px; 
-    display: block; 
-    font-weight: bold; 
+/* 2. 人間の言葉：そのまま */
+.human {
+    margin: 15px 0;
+    color: #222;
 }
 
-/* 吹き出し共通 */
-.bubble { 
-    position: relative; 
-    padding: 12px 16px; 
-    border-radius: 12px; 
-    margin-bottom: 30px; 
-    max-width: 85%; 
-    font-size: 15px; 
-    line-height: 1.6; 
-    clear: both; 
-    white-space: pre-wrap; 
-    text-align: left; 
-}
-
-/* 【人間パート】 */
-.human-part { 
-    float: right; 
-    width: 100%; 
-}
-.human-part .bubble { 
-    background: #fff; 
-    border: 1px solid #ddd; 
-    color: #000; 
-    margin-left: auto; /* 右に寄せる */
-}
-.human-part .label { 
-    text-align: right; 
-    margin-right: 5px; 
-}
-
-/* 【Geminiパート】 */
-.ai-part { 
-    float: left; 
-    width: 100%; 
-}
-.ai-part .bubble { 
-    background: #f9f9f9; /* 薄い灰色 */
-    border: 1px solid #ddd; 
-    color: #000; 
-    margin-right: auto; /* 左に寄せる */
-}
-.ai-part .label { 
-    text-align: left; 
-    margin-left: 5px; 
-}
-
-/* ③ 編集視点パート（追加しました） */
-.editor-note { 
-    text-align: center; 
-    margin: 40px 0; 
-    font-size: 14px; 
-    color: #666; 
-    line-height: 1.6;
-    background: none; /* 背景なし */
-    border: none;     /* 枠なし */
-    padding: 0;
-    clear: both;
+/* 3. AIの言葉：グレーの枠に入れる */
+.gemini {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    color: #333;
 }
