@@ -27,7 +27,7 @@
 }
 
 /* 3. AI共通設定（GeminiとGPT両方に効く） */
-.gemini, .gpt {
+.gemini, .ChatGPT {
     position: relative;
     margin: 35px 0 15px 20%; /* 左側を空けて右に寄せる */
     padding: 15px;
@@ -50,11 +50,11 @@
 }
 
 /* GPT：薄い緑 */
-.gpt {
+.ChatGPT {
     background-color: #f0fdf4;
     border: 1px solid #dcfce7;
 }
-.gpt::before {
+.ChatGPT::before {
     content: "ChatGPT";
     position: absolute;
     top: -22px;
