@@ -1,44 +1,64 @@
-/* 1. 編集者：真ん中寄せ、文字を大きく濃く */
+/* 1. 編集者：文字サイズを落とし、太字を解除 */
 .editor {
     text-align: center;
-    font-size: 1.25em;
+    font-size: 1.1em; /* 前より小さく */
     color: #000;
-    font-weight: bold;
-    margin: 40px 0;
+    margin: 30px 0;
+    white-space: pre-wrap; /* 枠内のみ改行を有効に */
 }
 
-/* 2. 人間：白い枠、右上に「人間」ラベル */
+/* 2. 人間：左寄せ、白い枠 */
 .human {
     position: relative;
-    margin: 40px 0 20px;
-    padding: 20px;
-    border: 1px solid #e0e0e0; /* 枠線 */
-    border-radius: 15px;      /* 角を丸く */
-    background-color: #fff;   /* 背景を白に */
+    margin: 35px 20% 15px 0; /* 右側を空けて左に寄せる */
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #fff;
+    white-space: pre-wrap; /* 枠内のみ改行を有効に */
 }
 .human::before {
     content: "人間";
     position: absolute;
-    top: -25px;
-    right: 10px;
+    top: -22px;
+    left: 5px;
     font-size: 0.8em;
     color: #888;
 }
 
-/* 3. AI：グレーの枠、左上に「Gemini」ラベル */
-.gemini {
+/* 3. AI共通設定（GeminiとGPT両方に効く） */
+.gemini, .gpt {
     position: relative;
-    margin: 40px 0 20px;
-    padding: 20px;
-    border: 1px solid #d1d9e0; /* 枠線 */
-    border-radius: 15px;      /* 角を丸く */
-    background-color: #f6f8fa; /* 背景をグレーに */
+    margin: 35px 0 15px 20%; /* 左側を空けて右に寄せる */
+    padding: 15px;
+    border-radius: 12px;
+    white-space: pre-wrap; /* 枠内のみ改行を有効に */
+}
+
+/* Gemini：薄いグレー */
+.gemini {
+    background-color: #f6f8fa;
+    border: 1px solid #d1d9e0;
 }
 .gemini::before {
     content: "Gemini";
     position: absolute;
-    top: -25px;
-    left: 10px;
+    top: -22px;
+    right: 5px;
+    font-size: 0.8em;
+    color: #888;
+}
+
+/* GPT：薄い緑 */
+.gpt {
+    background-color: #f0fdf4;
+    border: 1px solid #dcfce7;
+}
+.gpt::before {
+    content: "ChatGPT";
+    position: absolute;
+    top: -22px;
+    right: 5px;
     font-size: 0.8em;
     color: #888;
 }
