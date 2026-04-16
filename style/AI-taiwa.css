@@ -1,3 +1,11 @@
+img {
+      width: 50%;
+      height: auto;
+      display: block;
+    float: left;
+    margin:5px;
+}
+
 /* 1. 編集者：文字サイズを落とし、太字を解除 */
 .editor {
     text-align: center;
