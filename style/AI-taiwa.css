@@ -1,17 +1,11 @@
-AI img {
-      width: 50%;
-      height: auto;
-      display: block;
-    float: left;
-    margin:35px 0 15px 20%;
+.image-container {
+  display: flex; /* 横並びにする */
+  gap: 10px;    /* 画像間の隙間 */
+  justify-content: center; /* 中央寄せ */
 }
-
-human img {
-      width: 50%;
-      height: auto;
-      display: block;
-    float: left;
-    margin:35px 20% 15px 0;
+.image-container img {
+  max-width: 100%; /* レスポンシブ対応 */
+  height: auto;
 }
 
 /* 1. 編集者：文字サイズを落とし、太字を解除 */
