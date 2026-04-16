@@ -4,7 +4,7 @@
   justify-content: center; /* 中央寄せ */
 }
 .image-container img {
-  max-width: 100%; /* レスポンシブ対応 */
+  max-width: 30%; /* レスポンシブ対応 */
   height: auto;
 }
 
