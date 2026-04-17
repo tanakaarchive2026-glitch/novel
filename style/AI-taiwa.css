@@ -89,7 +89,7 @@
 /* 3. AI共通設定（GeminiとGPT両方に効く） */
 .gemini, .ChatGPT {
     position: relative;
-    margin: 25px 20% 35px 0; /* 左側を空けて右に寄せる */
+    margin: 25px 20% 50px 0; /* 左側を空けて右に寄せる */
     padding: 15px;
     border-radius: 12px;
     white-space: pre-wrap; /* 枠内のみ改行を有効に */
