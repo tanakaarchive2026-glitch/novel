@@ -56,15 +56,7 @@
         .back-to-top { font-size: 14px; color: #0055aa; }
 
 
-.image-container {
-  display: flex; /* 横並びにする */
-  gap: 10px;    /* 画像間の隙間 */
-  justify-content: center; /* 中央寄せ */
-}
-.image-container img {
-  max-width: 30%; /* レスポンシブ対応 */
-  height: auto;
-}
+
 
 /* 1. 編集者：文字サイズを落とし、太字を解除 */
 .editor {
@@ -129,4 +121,27 @@
     left: 5px;
     font-size: 0.8em;
     color: #888;
+}
+
+
+ /* html枠 */
+  .note-box {
+            background-color: #fcfcfc;
+            border: 1px solid #eee;
+            padding: 15px 20px;
+            margin: 40px 10px;
+            font-size: 14px;
+            color: #666;
+            line-height: 1.7;
+  }
+
+
+.image-container {
+  display: flex; /* 横並びにする */
+  gap: 10px;    /* 画像間の隙間 */
+  justify-content: center; /* 中央寄せ */
+}
+.image-container img {
+  max-width: 30%; /* レスポンシブ対応 */
+  height: auto;
 }
