@@ -137,11 +137,49 @@
 
 
 .image-container {
-  display: flex; /* 横並びにする */
-  gap: 10px;    /* 画像間の隙間 */
-  justify-content: center; /* 中央寄せ */
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
-.image-container img {
-  max-width: 30%; /* レスポンシブ対応 */
+
+.zoom-target {
+  max-width: 30%; /* 元のサイズ */
   height: auto;
+  cursor: zoom-in;
+  transition: transform 0.3s ease; /* アニメーション */
 }
+
+/* PC：マウスを乗せた時に少し大きくする */
+@media (hover: hover) {
+  .zoom-target:hover {
+    transform: scale(1.1); /* 1.1倍にズーム */
+  }
+}
+
+/* スマホ/PC共通：拡大された時のスタイル */
+.zoom-target.is-expanded {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2.5) !important; /* 中央に大きく */
+  z-index: 1000;
+  cursor: zoom-out;
+  max-width: 90vw; /* 画面からはみ出さないように */
+}
+
+/* 背景を暗くする幕 */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* 黒の半透明 */
+  z-index: 999;
+}
+
+.overlay.is-show {
+  display: block;
+}
+
