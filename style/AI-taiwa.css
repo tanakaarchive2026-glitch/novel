@@ -136,50 +136,41 @@
   }
 
 
-.image-container {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
+
+
+/* ダイアログ本体 */
+#imageDialog {
+  padding: 0;
+  border: none;
+  background: transparent;
 }
 
-.zoom-target {
-  max-width: 30%; /* 元のサイズ */
-  height: auto;
-  cursor: zoom-in;
-  transition: transform 0.3s ease; /* アニメーション */
-}
-
-/* PC：マウスを乗せた時に少し大きくする */
-@media (hover: hover) {
-  .zoom-target:hover {
-    transform: scale(1.1); /* 1.1倍にズーム */
-  }
-}
-
-/* スマホ/PC共通：拡大された時のスタイル */
-.zoom-target.is-expanded {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(2.5) !important; /* 中央に大きく */
-  z-index: 1000;
-  cursor: zoom-out;
-  max-width: 90vw; /* 画面からはみ出さないように */
-}
-
-/* 背景を暗くする幕 */
-.overlay {
-  display: none;
+/* 背景の黒い部分 */
+#backdrop {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8); /* 黒の半透明 */
-  z-index: 999;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: -1;
 }
 
-.overlay.is-show {
+/* 拡大される画像 */
+#largeImage {
+  max-width: 90vw;
+  max-height: 90vh;
   display: block;
+  margin: auto;
+  border: 3px solid white; /* お好みで白枠をつけたり */
+  box-shadow: 0 0 20px rgba(0,0,0,0.5); /* 影をつけたりできます */
 }
 
+/* クリックできる画像にマウスを乗せたら指マークにする */
+.zoom-target {
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.zoom-target:hover {
+  opacity: 0.8; /* ホバーした時に少し透明にする演出 */
+}
