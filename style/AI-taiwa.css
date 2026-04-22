@@ -124,6 +124,14 @@
 }
 
 
+
+
+  .large-text {
+    font-size: 32px;
+  }
+
+
+
  /* html枠 */
   .note-box {
             background-color: #fcfcfc;
