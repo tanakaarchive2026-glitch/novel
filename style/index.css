@@ -33,7 +33,7 @@ body {
   font-weight: bold;
   color: #d00;
   outline: none;
-padding-left: 1em;
+text-indent:1em;
 }
 
 .warning-accordion[open] {
