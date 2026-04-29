@@ -25,7 +25,6 @@ body {
 .warning-accordion {
   display: block;
   margin: 50px 0 50px;
-  padding-left: 1em;
   cursor: pointer;
 }
 
@@ -34,6 +33,7 @@ body {
   font-weight: bold;
   color: #d00;
   outline: none;
+padding-left: 1em;
 }
 
 .warning-accordion[open] {
