@@ -23,6 +23,7 @@ body {
         .intro span { display: inline-block; }
 
 .warning-accordion {
+  display: block;
   margin: 50px 0 50px 0;
   cursor: pointer;
 }
