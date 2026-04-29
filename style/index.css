@@ -24,7 +24,8 @@ body {
 
 .warning-accordion {
   display: block;
-  margin: 50px 0 50px 0;
+  margin: 50px 0 50px;
+  padding-left: 1em;
   cursor: pointer;
 }
 
