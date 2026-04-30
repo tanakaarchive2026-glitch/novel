@@ -123,6 +123,10 @@ th, td {
     text-align: center;
 }
 
+th { background-color: #bbd6fa; }
+td { background-color: #fff; }
+
+
 /* ナビゲーション */
 .to-under { /* 名前の修正 */
     text-align: right;
