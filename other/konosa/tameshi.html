@@ -1,90 +1,43 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:site_name" content="玩具の部屋">
+    <meta property="og:image" content="https://ganglion-room.github.io/novel/images/og.webp">
+    <meta property="og:type" content="website">
+
     <title>玩具の部屋</title>
 
-
-<style>
-/* --- 基本設定（共通） --- */
-body { 
-    font-family: sans-serif; 
-    line-height: 1.8; 
-    max-width: 800px; 
-    margin: 0 auto; 
-    padding: 15px; 
-    color: #222; 
-}
-
-/* 本文タイトル */
-.content-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 0 30px 0;
-    color: #444;
-    text-indent: 1em;
-}
-
-/* --- 万能：本文エリア（クラスで使い分け） --- */
-
-/* 基本（白背景） */
-.novel-body {
-    font-size: 15px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-
-</style>  
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80' font-family='sans-serif' fill='%23f8b500' style='paint-order: stroke; stroke: %23fff; stroke-width: 8px;'>玩</text></svg>">
+   　<link rel="stylesheet" href="../../style/bannnou.css">
 </head>
 <body id="top">
 
-    <div class="jump-link">
+    <div class="to-ander">
         <a href="#footer">▼ 下へ</a>
     </div>
 
     <h1 class="content-title">小説</h1>
 
-    <div class="novel-body"> ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。
+    <div class="novel"> ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。
 　ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。
 
       　ここに小説をかく。</div>
 
     <hr class="separator">
 
-<div class="nav-links">
-    <a href="6.html" class="prev-button">← 前話へ</a>
-    <a href="tameshi2.html" class="next-button">次話へ →</a>
+<div class="ep">
+    <a href="6.html" class="prev-ep">← 前話へ</a>
+    <a href="tameshi2.html" class="next-ep">次話へ →</a>
 </div>
 
-    <div class="bottom-nav" id="footer">
-        <a href="#top" class="go-top">▲ ページの上へ</a>
-        <a href="Charade.html" class="back-to-index">目次に戻る</a>
-        <a href="../../index.html" class="back-to-top">裏トップへ戻る</a>
+    <div class="return" id="footer">
+        <a href="#top" class="to-over">▲ ページの上へ</a>
+        <a href="Charade.html" class="to-synopsis">目次に戻る</a>
+        <a href="../../index.html" class="to-home">裏トップへ戻る</a>
     </div>
 
-<dialog id="imageDialog">
-  <div id="backdrop"></div>
-  <img id="largeImage" src="" alt="拡大画像">
-</dialog>
-  
-<script>
-
-// 画像拡大機能
-const dialog = document.getElementById('imageDialog');
-const largeImage = document.getElementById('largeImage');
-const backdrop = document.getElementById('backdrop');
-
-if (dialog && largeImage && backdrop) {
-    document.querySelectorAll('.zoom-target').forEach(img => {
-        img.onclick = () => {
-            largeImage.src = img.src;
-            dialog.showModal();
-        };
-    });
-
-    backdrop.onclick = () => dialog.close();
-}
-</script>
-  
 </body>
 </html>
