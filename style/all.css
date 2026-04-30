@@ -110,10 +110,11 @@ body {
 table {
     width: 100%;
     border-collapse: collapse;
-    overflow: auto;
+    overflow: auto;/*はみ出たらスクロール*/
     margin: 20px 0;
     white-space: normal;/*white-space: pre-wrap;を無効化*/
-    table-layout: auto;/*横にスクロール*/
+    table-layout: auto;/*列幅を量に合わせて自動調整*/
+    border-radius: 2px;   
 }
 
 th, td {
