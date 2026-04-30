@@ -1,57 +1,90 @@
-<html>
-
-<body bgcolor="lightcyan">
-
-<p>tokyo</p>
-<center><p>tokyo</p></center>
-<p align=" right">tokyo</p>
-<br>
-
-<p><center>tokyo</center></p>
-<br>
-
-<pre><font size="1">tokyo</font>
-<font size="2">tokyo</font>
-<font size="3">tokyo</font>
-<font size="4">tokyo</font>
-<font size="5">tokyo</font>
-<font size="6">tokyo</font>
-<font size="7">tokyo</font></pre>
-<br>
-
-<font color="red">tokyo</font>
-<font color="orange">tokyo</font>
-<font color="yellow">tokyo</font>
-<font color="lime">tokyo</font>
-<font color="aqua">tokyo</font>
-<font color="blue">tokyo</font>
-<font color="purple">tokyo</font>
-<br>
-
-<ol start="17">
-  <li>olのなかにul</li>
-  <li>猫耳</li>
-  <li>うさみみ</li>
-  <li>犬耳</li>
-    <ul>
-      <li>ブルドッグ</li>
-      <li>チワワ</li>
-   </ul>
- </ol>
-<br>
-
-<ul>
-      <li>ulのなかにol</li>
-      <li>おっぱい</li>
-      <li>下半身</li>
-   <ol>
-      <li>息子</li>
-      <li>娘</li>
-   </ol>
-</ul>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玩具の部屋</title>
 
 
+<style>
+/* --- 基本設定（共通） --- */
+body { 
+    font-family: sans-serif; 
+    line-height: 1.8; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 15px; 
+    color: #222; 
+}
 
+/* 本文タイトル */
+.content-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 30px 0;
+    color: #444;
+    text-indent: 1em;
+}
+
+/* --- 万能：本文エリア（クラスで使い分け） --- */
+
+/* 基本（白背景） */
+.novel-body {
+    font-size: 15px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+
+</style>  
+</head>
+<body id="top">
+
+    <div class="jump-link">
+        <a href="#footer">▼ 下へ</a>
+    </div>
+
+    <h1 class="content-title">小説</h1>
+
+    <div class="novel-body"> ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。
+　ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。ここに小説をかく。
+
+      　ここに小説をかく。</div>
+
+    <hr class="separator">
+
+<div class="nav-links">
+    <a href="6.html" class="prev-button">← 前話へ</a>
+    <a href="tameshi2.html" class="next-button">次話へ →</a>
+</div>
+
+    <div class="bottom-nav" id="footer">
+        <a href="#top" class="go-top">▲ ページの上へ</a>
+        <a href="Charade.html" class="back-to-index">目次に戻る</a>
+        <a href="../../index.html" class="back-to-top">裏トップへ戻る</a>
+    </div>
+
+<dialog id="imageDialog">
+  <div id="backdrop"></div>
+  <img id="largeImage" src="" alt="拡大画像">
+</dialog>
+  
+<script>
+
+// 画像拡大機能
+const dialog = document.getElementById('imageDialog');
+const largeImage = document.getElementById('largeImage');
+const backdrop = document.getElementById('backdrop');
+
+if (dialog && largeImage && backdrop) {
+    document.querySelectorAll('.zoom-target').forEach(img => {
+        img.onclick = () => {
+            largeImage.src = img.src;
+            dialog.showModal();
+        };
+    });
+
+    backdrop.onclick = () => dialog.close();
+}
+</script>
+  
 </body>
-
 </html>
