@@ -111,8 +111,9 @@ table {
     width: 100%;
     border-collapse: collapse;
     overflow: auto;
-    display: block; /* スマホ等で横スクロール可能に */
     margin: 20px 0;
+    white-space: normal;/*white-space: pre-wrap;を無効化*/
+    table-layout: auto;/*横にスクロール*/
 }
 
 th, td {
