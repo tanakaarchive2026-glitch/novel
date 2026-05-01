@@ -42,7 +42,7 @@ body {
     position: relative;
     padding: 15px;
     border-radius: 12px;
-    margin: 30px 0;
+    margin: 30px 0 30px;
 }
 
 /* 人間 (Human) */
@@ -187,20 +187,5 @@ td { background-color: #fff; }
 img {
   display: block;
   margin: 10px auto;
-  width: 30%;
-  transition: 0.1s;
-}
-
-img:active {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  /* ここで真ん中に戻しつつ、2倍にする */
-  transform: translate(-50%, -50%) scale(2);
-  z-index: 100;
-}
-
-/* bodyの背景変更はこれでOK（最新ブラウザなら動きます） */
-body:has(img:active) {
-  background: gray;
+  width: 40%;
 }
