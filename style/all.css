@@ -101,7 +101,6 @@ body {
     margin: 20px 10px;
     border-radius: 8px;
     overflow: auto;
-    white-space: nowrap;
 }
 
 .html { background-color: #fef2ff; }
