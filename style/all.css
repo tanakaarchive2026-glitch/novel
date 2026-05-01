@@ -187,18 +187,20 @@ td { background-color: #fff; }
 img {
   display: block;
   margin: 10px auto;
-  width: 200px;        /* 最初のサイズ（全部共通） */
-  transition: 0.2s;
+  width: 30%;
+  transition: 0.1s;
 }
 
-img:hover {
-  width: 80%;          /* ズーム後のサイズ（全部共通） */
+img:active {
   position: fixed;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  /* ここで真ん中に戻しつつ、2倍にする */
+  transform: translate(-50%, -50%) scale(2);
   z-index: 100;
 }
 
-body:has(img:hover) {
-  background: gray;    /* 背景を灰色に */
+/* bodyの背景変更はこれでOK（最新ブラウザなら動きます） */
+body:has(img:active) {
+  background: gray;
 }
