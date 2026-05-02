@@ -8,7 +8,7 @@
     <meta property="og:type" content="website">
 
 <!--表か裏か-->
-    <title>玩具の部屋{% if page.ura %}（裏）{% end if %}</title>
+    <title>玩具の部屋{% if page.ura %}（裏）{% endif %}</title>
 
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80' font-family='sans-serif' fill='%23f8b500' style='paint-order: stroke; stroke: %23fff; stroke-width: 8px;'>玩</text></svg>">
     <link rel="stylesheet" href="../../style/all.css">
@@ -30,8 +30,13 @@
 
 <!--前話　次話-->
 <div class="ep">
-    <a href="{{ page.prev }}.html" class="prev-ep">← 前話へ</a>
-    <a href="{{ page.next }}.html" class="next-ep">次話へ →</a>
+    {% if page.prev %}
+      <a href="{{ page.prev }}.html" class="prev-ep">← 前話へ</a>
+    {% endif %}
+
+    {% if page.next %}
+      <a href="{{ page.next }}.html" class="next-ep">次話へ →</a>
+    {% endif %}
 </div>
 
     <div class="return" id="under">
@@ -44,7 +49,7 @@
         <a href="../../Gallery.html" class="to-home">裏トップへ戻る🔑</a>
     {% else %}
         <a href="../../index.html" class="to-home">トップへ戻る🏠️</a>
-    {% end if %}
+    {% endif %}
     </div>
 </footer>
 
