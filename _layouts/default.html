@@ -1,16 +1,47 @@
-<!-- _layouts/default.html の中身 -->
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-    <!-- ここに既成のヘッドを貼る -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:site_name" content="玩具の部屋">
+    <meta property="og:image" content="https://ganglion-room.github.io/novel/images/og.webp">
+    <meta property="og:type" content="website">
+
+<!--表か裏か-->
+    <title>玩具の部屋（裏）</title>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80' font-family='sans-serif' fill='%23f8b500' style='paint-order: stroke; stroke: %23fff; stroke-width: 8px;'>玩</text></svg>">
+    <link rel="stylesheet" href="../../style/all.css">
+    <link href="https://googleapis.com" rel="stylesheet">
 </head>
-<body>
-    <header><!-- ここに既成のヘッダー --></header>
+<header>
+<body id="over">
+    <div class="to-under">
+        <a href="#under">▼ 下へ</a>
+    </div>
+</header>
 
-    <main>
+<main>
         {{ content }}  <!-- ← ここに各話の中身が自動で入る -->
-    </main>
+</main>
 
-    <footer><!-- ここに既成のフッター --></footer>
+<footer><!-- ここに既成のフッター -->
+   <hr class="separator">
+
+<!--前話　次話-->
+<div class="ep">
+    <a href="○.html" class="prev-ep">← 前話へ</a>
+    <a href="○.html" class="next-ep">次話へ →</a>
+</div>
+
+    <div class="return" id="under">
+        <a href="#over" class="to-over">▲ ページの上へ</a>
+
+<!--目次　ホームページ　トップへ-->
+        <a href="○.html" class="to-synopsis">目次に戻る</a>
+        <a href="../../index・Gallery.html" class="to-home">裏トップへ戻る</a>
+    </div>
+</footer>
+
 </body>
 </html>
