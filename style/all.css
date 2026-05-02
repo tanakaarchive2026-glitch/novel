@@ -7,7 +7,7 @@ body {
     margin: 0 auto;
     padding: 15px;
     color: #333;
-    background-color: #f9f9f9;
+    background-color: #fcfcfc;
     overflow-wrap: anywhere;
 }
 
@@ -25,8 +25,12 @@ body {
     white-space: pre-wrap;
 }
 
+.ai-novel, .E, .H, .G, .C {
+    font-size:15px;
+}
+
 .ai-novel {
-    background-color: #f6f8fa;
+    background-color: #eff3f6;
     padding: 30px 10px;
     border-radius: 8px;
     margin: 20px 0;
@@ -66,7 +70,7 @@ body {
 .G {
     margin-right: 20%;
     border: 1px solid #d1d9e0;
-    background-color: #f6f8fa; 
+    background-color: #eff3f6; 
 }
 
 .G::before {
@@ -82,7 +86,7 @@ body {
 .C {
     margin-right: 20%;
     border: 1px solid #dcfce7;
-    background-color: #f0fdf4;
+    background-color: #e6ffed;
 }
 
 .C::before {
@@ -112,7 +116,7 @@ body {
 table {
     width: 100%;
     border-collapse: collapse;
-    overflow: auto;/*はみ出たらスクロール*/
+    overflow-x: auto;/*はみ出たらスクロール*/
     margin: 20px 0;
     white-space: nowrap; /* 自動改行を禁止 */
     table-layout: auto;/*列幅を量に合わせて自動調整*/   
