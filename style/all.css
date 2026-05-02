@@ -1,12 +1,13 @@
 /* 基本設定 */
 body { 
-    font-family: sans-serif; 
-    font-size: 15px;
-    line-height: 1.8; 
-    max-width: 800px; 
-    margin: 0 auto; 
-    padding: 15px; 
-    color: #333; 
+    font-family: 'BIZ UDGothic',sans-serif; 
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+    color: #333;
+    background-color: #f9f9f9;
     overflow-wrap: anywhere;
 }
 
