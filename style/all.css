@@ -188,9 +188,20 @@ td { background-color: #fff; }
     .G, .C { margin-right: 5%; }
 }
 
-
+/*img設定*/
 img {
   display: block;
   margin: 10px auto;
   width: 40%;
+}
+
+/* details設定 */
+details {
+    white-space: pre-wrap;
+    background-color: #fef7ff; /* 元の色 */
+    transition: background-color 0.3s; /* 色の変化を滑らかにする場合 */
+}
+
+details[open] {
+    background-color: #e0f2f1; 
 }
